@@ -1,0 +1,15 @@
+name: AssetReplacePath
+id  : AssetReplacePath
+key:  assetreplacepath
+version: 0.0.1
+author_link: 
+author_name: 
+l10n_class: AssetReplacePath::L10N
+description: <__trans phrase="It replace link in TinyMCE">
+blog_config_template: config.tmpl
+callbacks:
+    MT::App::CMS::template_param.asset_insert: $AssetReplacePath::AssetReplacePath::Plugin::_asset_relative_url
+    MT::App::CMS::template_param.asset_list: $AssetReplacePath::AssetReplacePath::Plugin::_asset_list
+settings:
+    assetreplacepath_search:
+    assetreplacepath_replace:
